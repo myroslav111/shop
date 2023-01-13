@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 const Cart: FC = () => {
-  return <div>Cart</div>;
+  return <div></div>;
 };
 
 export default Cart;

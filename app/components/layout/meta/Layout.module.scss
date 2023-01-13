@@ -1,11 +1,8 @@
-// .layout {
-//     @apply flex flex-wrap;
+.layout {
+  > main {
+    @apply bg-white py-8 px-10;
 
-//     > main {
-//         @apply flex w-4/5 bg-light-gray py-8 px-10;
-
-//         > .content{
-
-//         }
-//     }
-// }
+    > .content {
+    }
+  }
+}

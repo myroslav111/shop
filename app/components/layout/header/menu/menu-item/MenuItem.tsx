@@ -9,10 +9,9 @@ interface IMenuItem {
 
 const MenuItem: FC<IMenuItem> = ({ item }) => {
   return (
-    // <li>
-    //   <Link href='/'>Navigation</Link>
-    // </li>
-    <div>{item.name}</div>
+    <li>
+      <Link href={item.name}>{item.name}</Link>
+    </li>
   );
 };
 
