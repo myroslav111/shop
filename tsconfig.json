@@ -16,10 +16,10 @@
     "incremental": true,
     "baseUrl": "./app/",
     "paths": {
-      "@/layout/*":["components/layout/*"],
-      "@/ui/*":["component/ui/*"],
+      "@/layout/*": ["components/layout/*"],
+      "@/ui/*": ["component/ui/*"],
       "@/screens/*": ["component/screens/*"],
-      "@/*":["./*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

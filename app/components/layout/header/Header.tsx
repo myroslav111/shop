@@ -5,7 +5,7 @@ import Cart from './cart/Cart';
 import Menu from './menu/Menu';
 import Search from './search/Search';
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className={styles.header}>
       <Menu />

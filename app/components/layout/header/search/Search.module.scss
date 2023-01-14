@@ -6,7 +6,7 @@
   }
 
   &::before {
-    @apply absolute -top-1/4 w-[120%] rounded-full bg-light-green pt-[120%];
+    @apply absolute -top-[280%] -left-[10%] w-[120%] rounded-full bg-light-green pt-[120%];
     content: '';
   }
 }

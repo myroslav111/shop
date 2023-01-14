@@ -4,13 +4,15 @@ import Header from '../header/Header';
 
 import styles from './Layout.module.scss';
 import Meta from './Meta';
-import { ILayout } from './meta.interface';
+import { ISeo } from './meta.interface';
+
+interface ILayout extends ISeo {}
 
 // const Layout: FC<PropsWithChildren> = ({ children, ...rest }) => {
 const Layout: FC<PropsWithChildren<ILayout>> = ({ children, ...rest }) => {
   return (
     <>
-      {/* <Meta {...rest} /> */}
+      <Meta {...rest} />
       <div className={styles.layout}>
         <main>
           <Header />

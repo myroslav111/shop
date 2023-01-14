@@ -6,6 +6,6 @@ export interface ISeo {
   title: any;
 }
 
-export interface ILayout {
-  title: string;
-}
+// export interface ILayout {
+//   title: string;
+// }
