@@ -27,7 +27,7 @@ export const cartSlice = createSlice({
     },
     changeQuantity: (state, action: PayloadAction<IChangeQuantityPayload>) => {
       const { id, type } = action.payload;
-      const item = state.items.find(item => item.product.id === id);
+      const item = state.items.find(item => item.id === id);
       if (item) type === 'plus' ? item.quantity++ : item.quantity--;
     }
   }
