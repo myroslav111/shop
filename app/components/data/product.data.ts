@@ -18,8 +18,8 @@ export const products: IProduct[] = [
     id: 2,
     description:
       'Medium gerösteter Kaffee mit sanftem, ausgewogenem und reichhaltigem Geschmack',
-    name: 'Espresso',
-    images: ['/images/products/Espresso.webp'],
+    name: 'Espresso Vanilla Sirup Premium Hazelnut',
+    images: ['/images/products/White_Hot_Chocolate.webp'],
     price: 5,
     reviews: []
   },
@@ -54,7 +54,7 @@ export const products: IProduct[] = [
     id: 6,
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
-    name: 'Premium Hot Chocolate',
+    name: 'Premium Hot Chocolate Tea Cream',
     images: ['/images/products/Premium_Hot_Chocolate.webp'],
     price: 12,
     reviews: []

@@ -6,6 +6,7 @@ import styles from './Layout.module.scss';
 import Meta from './Meta';
 import { ISeo } from './meta.interface';
 
+// interface ILayout extends Pick<ISeo, 'title'> {}
 interface ILayout extends ISeo {}
 
 // const Layout: FC<PropsWithChildren> = ({ children, ...rest }) => {
@@ -16,7 +17,7 @@ const Layout: FC<PropsWithChildren<ILayout>> = ({ children, ...rest }) => {
       <div className={styles.layout}>
         <main>
           <Header />
-          <section className={styles.content}></section>
+          <section className={styles.content}>{children}</section>
         </main>
       </div>
     </>

@@ -7,8 +7,8 @@ import { onlyText } from '@/utils/clear-text';
 import { siteName, titleMerge } from './meta.config';
 import { ISeo } from './meta.interface';
 
- const Meta: FC<PropsWithChildren<ISeo>> = ({
-  title,
+const Meta: FC<PropsWithChildren<ISeo>> = ({
+  title = 'title',
   description,
   image = '/images/logo.png',
   children,
@@ -41,6 +41,7 @@ import { ISeo } from './meta.interface';
             />
           </>
         ) : (
+          //если описание отсутствует мета для поисковых машин закрыта
           <meta name='robots' content='noindex, nofolow' />
         )}
       </Head>
@@ -49,4 +50,4 @@ import { ISeo } from './meta.interface';
   );
 };
 
-export default Meta
+export default Meta;

@@ -1,0 +1,25 @@
+.carousel {
+  @apply mt-32 grid grid-cols-4 gap-8;
+}
+.item {
+  @apply mb-8 rounded-3xl bg-ligt-gray p-5 pt-0;
+  .image {
+    @apply -mt-[4.5rem];
+  }
+  .heading {
+    @apply mt-3 text-xl font-bold leading-7 text-beige;
+
+    /* max-height: 2.4rem; */
+    > div {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  .description {
+    @apply mt-5 text-sm text-beige opacity-90;
+  }
+  &.active {
+  }
+}

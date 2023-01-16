@@ -1,9 +1,9 @@
 export interface ISeo {
-  name: any;
-  type: any;
-  image: any;
-  description: any;
-  title: any;
+  title?: string;
+  name?: string;
+  type?: string;
+  image?: string;
+  description?: string;
 }
 
 // export interface ILayout {
