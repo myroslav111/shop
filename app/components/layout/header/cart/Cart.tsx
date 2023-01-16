@@ -12,6 +12,8 @@ import { FC, useRef, useState } from 'react';
 
 import { useTypedSelector } from '@/hooks/useTypedSelector';
 
+import { formatToCurency } from '@/utils/format-to-currency';
+
 // import { cart } from '@/components/data/cart.data';
 import styles from './Cart.module.scss';
 import CartItem from './cart-item/CartItem';
@@ -22,6 +24,11 @@ const Cart: FC = () => {
 
   const cart = useTypedSelector(state => state.cart.items);
 
+  const total = cart.reduce(
+    (acc, item) => acc + item.product.price * item.quantity,
+    0
+  );
+
   return (
     <div className={styles['wrapper-cart']}>
       <button
@@ -29,7 +36,7 @@ const Cart: FC = () => {
         onClick={e => setIsOpen(!isOpen)}
         ref={btnRef}
       >
-        <span className={styles.badge}>1</span>
+        <span className={styles.badge}>{cart.length}</span>
         <span className={styles.text}>MY BASKET</span>
       </button>
       {isOpen && (
@@ -59,7 +66,7 @@ const Cart: FC = () => {
             >
               <div className={styles.footer}>
                 <div>total:</div>
-                <div>$100</div>
+                <div>{formatToCurency(total)}</div>
               </div>
               <Button colorScheme='green'>Checkout</Button>
             </DrawerFooter>
