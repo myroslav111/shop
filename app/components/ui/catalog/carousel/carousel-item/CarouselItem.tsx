@@ -6,9 +6,9 @@ import styles from '../Carousel.module.scss';
 
 import { IProduct } from '@/types/product.intarface';
 
-const isActive = false;
-
 const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
+  const isActive = product.id === 2;
+
   return (
     <div
       //либа clsx если елемент активен то к нему добавляется клас styles.item
@@ -16,17 +16,22 @@ const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
         [styles.active]: isActive
       })}
     >
-      <Image
-        className={styles.image}
-        alt={product.name}
-        src={product.images[0]}
-        width={350}
-        height={350}
-      />
-      <div className={styles.heading}>
-        <div>{product.name}</div>
+      <div>
+        <Image
+          className={styles.image}
+          alt={product.name}
+          src={product.images[0]}
+          width={350}
+          height={350}
+        />
+        <div className={styles.heading}>
+          <div>{product.name}</div>
+        </div>
+
+        {!isActive && (
+          <div className={styles.description}>{product.description}</div>
+        )}
       </div>
-      <div className={styles.description}>{product.description}</div>
     </div>
   );
 };
