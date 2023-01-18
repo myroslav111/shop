@@ -5,6 +5,7 @@ import { cart } from '@/components/data/cart.data';
 import {
   IAddToCartPayload,
   IChangeQuantityPayload,
+  IChangeSizePayload,
   IInitialState
 } from './types';
 
@@ -29,6 +30,11 @@ export const cartSlice = createSlice({
       const { id, type } = action.payload;
       const item = state.items.find(item => item.id === id);
       if (item) type === 'plus' ? item.quantity++ : item.quantity--;
+    },
+    changeSize: (state, action: PayloadAction<IChangeSizePayload>) => {
+      const { id, size } = action.payload;
+      const item = state.items.find(item => item.id === id);
+      if (item) item.size = size;
     }
   }
 });

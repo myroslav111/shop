@@ -7,7 +7,7 @@ const constants = {
   purple: '#6160dc',
   'light-blue': '#03daf2',
   orange: '#ffb74a',
-  green: '#008d64',
+  green: '#6c946b',
   'dark-green': '#006044',
   'light-green': '#e6f2ef',
   black: '#222222',

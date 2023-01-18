@@ -1,12 +1,22 @@
+import { Button } from '@chakra-ui/react';
 import cn from 'clsx';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useState } from 'react';
+
+import { COLORS } from '@/config/color.config';
+
+import { TypeSize } from '@/store/types';
+
+import { useActions } from '@/hooks/useActions';
 
 import styles from '../Carousel.module.scss';
 
+import CarouselButton from './CarouselButton';
+import CarouselVariations from './CarouselVariations';
 import { IProduct } from '@/types/product.intarface';
 
 const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
+  const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
   const isActive = product.id === 2;
 
   return (
@@ -28,7 +38,16 @@ const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
           <div>{product.name}</div>
         </div>
 
-        {!isActive && (
+        {isActive ? (
+          <>
+            <CarouselVariations
+              productId={product.id}
+              selectedSize={selectedSize}
+              setSelectedSize={setSelectedSize}
+            />
+            <CarouselButton product={product} selectedSize={selectedSize} />
+          </>
+        ) : (
           <div className={styles.description}>{product.description}</div>
         )}
       </div>
