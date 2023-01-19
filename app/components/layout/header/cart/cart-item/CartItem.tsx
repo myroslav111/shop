@@ -23,6 +23,7 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
         <div className={styles.price}>
           {formatToCurency(item.product.price)}
         </div>
+        <div className={styles.variation}>{item.size}</div>
         <CartActions item={item} />
       </div>
     </div>

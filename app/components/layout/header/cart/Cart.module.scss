@@ -21,6 +21,9 @@
   .price {
     @apply mt-1 text-sm text-beige;
   }
+  .variation {
+    @apply mt-1 text-xs text-beige opacity-70;
+  }
 }
 
 .footer {

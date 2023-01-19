@@ -1,47 +1,52 @@
-import { Button } from '@chakra-ui/react';
 import cn from 'clsx';
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { FC, useState } from 'react';
 
-import { COLORS } from '@/config/color.config';
-
-import { TypeSize } from '@/store/types';
+import { TypeSize } from '@/store/cart/cart.types';
 
 import { useActions } from '@/hooks/useActions';
 
 import styles from '../Carousel.module.scss';
+import { useCarousel } from '../useCarousel';
 
 import CarouselButton from './CarouselButton';
 import CarouselVariations from './CarouselVariations';
-import { IProduct } from '@/types/product.intarface';
+import CarouselNavigation from './carousel-navigations/CarouselNavigation';
+import { ICarouselItem } from './carousel.iterface';
 
-const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
+const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
   const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
-  const isActive = product.id === 2;
 
+  const { selectedItemIndex } = useCarousel();
+  const { selectSlide } = useActions();
+
+  const isActive = index === selectedItemIndex;
   return (
-    <div
+    <motion.div
+      initial={{ scale: 1 }}
+      animate={isActive ? { scale: 1.12 } : {}}
+      transition={{ duration: 0.7, type: 'tween' }}
       //либа clsx если елемент активен то к нему добавляется клас styles.item
       className={cn(styles.item, {
         [styles.active]: isActive
       })}
+      aria-label='Select item'
+      role='button'
     >
       <div>
-        <Image
-          className={styles.image}
-          alt={product.name}
-          src={product.images[0]}
-          width={350}
-          height={350}
+        <CarouselNavigation
+          onSelectSlide={() => selectSlide(index)}
+          product={product}
+          isActive={isActive}
         />
-        <div className={styles.heading}>
-          <div>{product.name}</div>
-        </div>
+
+        <button className={styles.heading} onClick={() => selectSlide(index)}>
+          <span>{product.name}</span>
+        </button>
 
         {isActive ? (
           <>
             <CarouselVariations
-              productId={product.id}
               selectedSize={selectedSize}
               setSelectedSize={setSelectedSize}
             />
@@ -51,7 +56,7 @@ const CarouselItem: FC<{ product: IProduct }> = ({ product }) => {
           <div className={styles.description}>{product.description}</div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

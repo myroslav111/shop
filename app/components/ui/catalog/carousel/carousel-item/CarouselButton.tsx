@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import { COLORS } from '@/config/color.config';
 
-import { TypeSize } from '@/store/types';
+import { TypeSize } from '@/store/cart/cart.types';
 
 import { useActions } from '@/hooks/useActions';
 
@@ -28,7 +28,7 @@ const CarouselButton: FC<ICarouselButton> = ({ product, selectedSize }) => {
         }
         color={COLORS.green}
         className='tracking-widest'
-        marginTop={10}
+        marginTop={8}
         borderRadius={20}
         fontWeight={500}
         textTransform='uppercase'
