@@ -1,4 +1,4 @@
-@tailwind base;
+@import 'app/assets/styles/variables.scss';
 @tailwind components;
 @tailwind utilities;
 
@@ -29,6 +29,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  @apply text-base text-black;
 }
 
 input::-ms-clear {

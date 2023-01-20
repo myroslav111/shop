@@ -18,8 +18,8 @@
     }
   }
   .description {
-    @apply mt-5 text-sm text-beige opacity-90;
-    animation: animationOpacity 0.5s;
+    @apply mt-5 animate-opacity text-sm text-beige opacity-90;
+    /* animation: animationOpacity 0.5s; */
   }
 
   > div {
@@ -27,8 +27,8 @@
   }
 
   .variations {
-    @apply mt-6 grid grid-cols-4 gap-2.5;
-    animation: animationOpacity 0.5s;
+    @apply mt-6 grid animate-opacity grid-cols-4 gap-2.5;
+    /* animation: animationOpacity 0.5s; */
     > button {
       @apply rounded border border-solid border-white bg-transparent px-0.5 py-0.5 text-center text-[0.6rem] font-semibold uppercase text-white transition-colors;
 
@@ -59,15 +59,5 @@
     .heading {
       @apply text-3xl leading-9 text-white;
     }
-  }
-}
-
-@keyframes animationOpacity {
-  from {
-    opacity: 0.2;
-  }
-
-  to {
-    opacity: 1;
   }
 }
