@@ -6,6 +6,7 @@ export const products: IProduct[] = [
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Caramel Cream Frappuccino',
+    slug: 'caramel-cream-frappuccino',
     images: [
       '/images/products/Caramel_Cream_Frappuccino.webp',
       '/images/products/Espresso.webp',
@@ -19,6 +20,7 @@ export const products: IProduct[] = [
     description:
       'Medium gerösteter Kaffee mit sanftem, ausgewogenem und reichhaltigem Geschmack',
     name: 'Espresso Vanilla Sirup Premium Hazelnut',
+    slug: 'espresso-vanilla-sirup-premium-hazelnut',
     images: ['/images/products/White_Hot_Chocolate.webp'],
     price: 5,
     reviews: []
@@ -28,6 +30,7 @@ export const products: IProduct[] = [
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Matcha Tea Cream Frappuccino',
+    slug: 'matcha-tea-cream-frappuccino',
     images: ['/images/products/Matcha_Tea_Cream_Frappuccino.webp'],
     price: 10,
     reviews: []
@@ -37,6 +40,7 @@ export const products: IProduct[] = [
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Premium Caramel Hot Chocolate',
+    slug: 'premium-caramel-hot-chocolate',
     images: ['/images/products/Premium_Caramel_Hot_Chocolate.webp'],
     price: 3,
     reviews: []
@@ -46,6 +50,7 @@ export const products: IProduct[] = [
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Premium Hazelnut Hot Chocolate',
+    slug: 'premium-hazelnut-hot-chocolate',
     images: ['/images/products/Premium_Hazelnut_Hot_Chocolate.webp'],
     price: 15,
     reviews: []
@@ -55,6 +60,7 @@ export const products: IProduct[] = [
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Premium Hot Chocolate Tea Cream',
+    slug: 'premium-hot-chocolate-tea-cream',
     images: ['/images/products/Premium_Hot_Chocolate.webp'],
     price: 12,
     reviews: []

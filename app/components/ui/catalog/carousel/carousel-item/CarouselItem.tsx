@@ -1,5 +1,6 @@
 import cn from 'clsx';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { FC, useState } from 'react';
 
 import { TypeSize } from '@/store/cart/cart.types';
@@ -51,6 +52,9 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
               setSelectedSize={setSelectedSize}
             />
             <CarouselButton product={product} selectedSize={selectedSize} />
+            <Link href={`/product/${product.slug}`} className={styles.link}>
+              More information
+            </Link>
           </>
         ) : (
           <div className={styles.description}>{product.description}</div>

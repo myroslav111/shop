@@ -7,6 +7,7 @@ import Heading from '@/components/ui/heading/Heading';
 import Layout from '@/layout/meta/Layout';
 
 const Home: FC = () => {
+  /* SSR need */
   return (
     <>
       <Layout

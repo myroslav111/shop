@@ -5,4 +5,6 @@ export interface IProduct {
   price: number;
   reviews: [];
   images: string[];
+  slug: string;
+  //TODO: Add review interface
 }

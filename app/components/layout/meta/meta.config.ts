@@ -1,7 +1,3 @@
-export const siteName = () => {
-  return 'siteName';
-};
+export const siteName = 'COFFEE SHOP';
 
-export const titleMerge = (string: string) => {
-  return string;
-};
+export const titleMerge = (title: string) => `${title} | ${siteName}`;

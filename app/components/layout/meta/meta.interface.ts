@@ -5,7 +5,3 @@ export interface ISeo {
   image?: string;
   description?: string;
 }
-
-// export interface ILayout {
-//   title: string;
-// }
