@@ -10,13 +10,11 @@ import styles from '../Carousel.module.scss';
 const SIZES: TypeSize[] = ['SHORT', 'TALL', 'GRANDE', 'VENTI'];
 
 interface ICarouselVariations {
-  // productId: number;
   selectedSize: TypeSize;
   setSelectedSize: Dispatch<SetStateAction<TypeSize>>;
 }
 
 const CarouselVariations: FC<ICarouselVariations> = ({
-  // productId,
   selectedSize,
   setSelectedSize
 }) => {

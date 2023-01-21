@@ -6,7 +6,7 @@ import { IProductDetails } from '@/../pages/product/[slug]';
 
 const Breadcrumbs: FC<IProductDetails> = ({ product }) => {
   return (
-    <Breadcrumb marginTop={8} display='flex' justifyContent='end'>
+    <Breadcrumb color='#444' marginTop={8} display='flex' justifyContent='end'>
       <BreadcrumbItem>
         <BreadcrumbLink as={Link} href='/'>
           Home
@@ -14,7 +14,15 @@ const Breadcrumbs: FC<IProductDetails> = ({ product }) => {
       </BreadcrumbItem>
 
       <BreadcrumbItem isCurrentPage>
-        <BreadcrumbLink>{product.name}</BreadcrumbLink>
+        <BreadcrumbLink
+          _hover={{
+            textDecoration: 'none'
+          }}
+          cursor='default'
+          color='#666'
+        >
+          {product.name}
+        </BreadcrumbLink>
       </BreadcrumbItem>
     </Breadcrumb>
   );

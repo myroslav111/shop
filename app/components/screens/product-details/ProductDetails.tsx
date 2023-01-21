@@ -5,6 +5,7 @@ import Heading from '@/components/ui/heading/Heading';
 import Layout from '@/layout/meta/Layout';
 
 import Breadcrumbs from './product-breadcrumbs/Breadcrumbs';
+import ProductNavigation from './product-navigation/ProductNavigation';
 import { IProductDetails } from '@/../pages/product/[slug]';
 
 const ProductDetails: FC<IProductDetails> = ({ product }) => {
@@ -14,6 +15,7 @@ const ProductDetails: FC<IProductDetails> = ({ product }) => {
         <Heading className='text-center'>{product.name}</Heading>
         <div>
           <Breadcrumbs product={product} />
+          <ProductNavigation productId={product.id} />
         </div>
       </Layout>
     </>

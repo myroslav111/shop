@@ -79,3 +79,11 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+  opacity: 0.2 !important;
+}
