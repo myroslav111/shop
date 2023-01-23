@@ -1,0 +1,40 @@
+.card {
+  @apply relative my-8 grid grid-cols-3 gap-5 bg-ligt-gray p-10;
+  border-radius: 2rem;
+  .information {
+    > h1 {
+      @apply mb-5 text-3xl font-bold leading-tight text-darck-beige;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    > div {
+      @apply mb-12;
+      > p {
+        @apply text-beige;
+      }
+    }
+    > button {
+      @apply mr-4 rounded-2xl bg-white last:mr-0;
+    }
+  }
+
+  .image {
+    @apply text-center;
+    .main {
+      @apply mx-auto flex h-[18.4rem] w-[18.4rem] items-center justify-center overflow-hidden rounded-full bg-white;
+      box-shadow: 0px 5px 100px -50px #6c946b;
+      img {
+        @apply -mt-10;
+      }
+    }
+    .price {
+      @apply -mt-[3.75rem] text-2xl font-bold text-green;
+    }
+  }
+
+  .variations {
+  }
+}

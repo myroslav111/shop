@@ -10,12 +10,12 @@ import { useCart } from '@/hooks/useCart';
 
 import { IProduct } from '@/types/product.intarface';
 
-interface ICarouselButton {
+interface IAddToCartlButton {
   product: IProduct;
   selectedSize: TypeSize;
 }
 
-const CarouselButton: FC<ICarouselButton> = ({ product, selectedSize }) => {
+const AddToCartlButton: FC<IAddToCartlButton> = ({ product, selectedSize }) => {
   const { addToCart, removeFromCart } = useActions();
   const { cart } = useCart();
   const currentElement = cart.find(
@@ -48,4 +48,4 @@ const CarouselButton: FC<ICarouselButton> = ({ product, selectedSize }) => {
   );
 };
 
-export default CarouselButton;
+export default AddToCartlButton;

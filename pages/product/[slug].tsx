@@ -3,11 +3,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { products } from '@/components/data/product.data';
 import ProductDetails from '@/components/screens/product-details/ProductDetails';
 
-import { IProduct } from '@/types/product.intarface';
-
-export interface IProductDetails {
-  product: IProduct;
-}
+import { IProduct, IProductDetails } from '@/types/product.intarface';
 
 const ProductDetailsPage: NextPage<IProductDetails> = ({ product }) => {
   return <ProductDetails product={product} />;

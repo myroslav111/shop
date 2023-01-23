@@ -10,8 +10,8 @@ import { useActions } from '@/hooks/useActions';
 import styles from '../Carousel.module.scss';
 import { useCarousel } from '../useCarousel';
 
-import CarouselButton from './CarouselButton';
-import CarouselVariations from './CarouselVariations';
+import AddToCartButton from './AddToCartButton';
+import SizeVariations from './SizeVariations';
 import CarouselNavigation from './carousel-navigations/CarouselNavigation';
 import { ICarouselItem } from './carousel.iterface';
 
@@ -47,11 +47,11 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
 
         {isActive ? (
           <>
-            <CarouselVariations
+            <SizeVariations
               selectedSize={selectedSize}
               setSelectedSize={setSelectedSize}
             />
-            <CarouselButton product={product} selectedSize={selectedSize} />
+            <AddToCartButton product={product} selectedSize={selectedSize} />
             <Link href={`/product/${product.slug}`} className={styles.link}>
               More information
             </Link>

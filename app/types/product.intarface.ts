@@ -8,3 +8,7 @@ export interface IProduct {
   slug: string;
   //TODO: Add review interface
 }
+
+export interface IProductDetails {
+  product: IProduct;
+}

@@ -11,7 +11,5 @@ export const useProductNavigation = (productId: number) => {
   return {
     nextProductSlug,
     prevProductSlug
-    // isNextDisabled: productId === products.length,
-    // isPrevDisabled: productId === 1
   };
 };

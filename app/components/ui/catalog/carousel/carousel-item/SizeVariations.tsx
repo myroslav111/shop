@@ -14,7 +14,7 @@ interface ICarouselVariations {
   setSelectedSize: Dispatch<SetStateAction<TypeSize>>;
 }
 
-const CarouselVariations: FC<ICarouselVariations> = ({
+const SizeVariations: FC<ICarouselVariations> = ({
   selectedSize,
   setSelectedSize
 }) => {
@@ -37,4 +37,4 @@ const CarouselVariations: FC<ICarouselVariations> = ({
   );
 };
 
-export default CarouselVariations;
+export default SizeVariations;
