@@ -10,7 +10,7 @@ const Menu: FC = () => {
   return (
     <div className={styles.menu}>
       <Link href='/'>
-        <Image src='/images/logo.png' width={100} height={100} alt='logo' />
+        <Image src='/images/coffee.png' width={100} height={100} alt='logo' />
       </Link>
 
       <nav>
