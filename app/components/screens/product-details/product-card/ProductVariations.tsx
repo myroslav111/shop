@@ -14,12 +14,17 @@ const ProductVariations: FC<IProductDetails> = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
   return (
     <div className={styles.variations}>
-      <ProductRating />
+      <ProductRating product={product} />
       <SizeVariations
         selectedSize={selectedSize}
         setSelectedSize={setSelectedSize}
+        variant='medium'
       />
-      <AddToCartlButton product={product} selectedSize={selectedSize} />
+      <AddToCartlButton
+        variant='medium'
+        product={product}
+        selectedSize={selectedSize}
+      />
     </div>
   );
 };

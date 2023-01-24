@@ -17,7 +17,10 @@
       }
     }
     > button {
-      @apply mr-4 rounded-2xl bg-white last:mr-0;
+      @apply mr-4 rounded-2xl bg-white transition-colors ease-linear last:mr-0;
+      &.active {
+        @apply bg-green;
+      }
     }
   }
 

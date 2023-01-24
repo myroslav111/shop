@@ -7,7 +7,10 @@ import styles from '../ProductCard.module.scss';
 
 const ProductRating: FC<IProductDetails> = ({ product }) => {
   const [rating, setRating] = useState(
-    product.reviews.reduce((acc, review) => acc, 0)
+    Math.round(
+      product.reviews.reduce((acc, review) => acc + review.rating, 0) /
+        product.reviews.length
+    ) || 0
   );
 
   // Catch Rating value
@@ -31,6 +34,7 @@ const ProductRating: FC<IProductDetails> = ({ product }) => {
         onPointerLeave={onPointerLeave}
         onPointerMove={onPointerMove}
         initialValue={rating}
+        readonly
         /* Available Props */
         SVGstyle={{
           display: 'inline-block'

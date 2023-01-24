@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { IProductDetails } from '@/types/product.intarface';
 
@@ -8,10 +8,16 @@ import ProductInformation from './ProductInformation';
 import ProductVariations from './ProductVariations';
 
 const ProductCard: FC<IProductDetails> = ({ product }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   return (
     <div className={styles.card}>
-      <ProductInformation product={product} />
-      <ProductImage product={product} />
+      <ProductInformation
+        product={product}
+        currentImageIndex={currentImageIndex}
+        setCurrentImageIndex={setCurrentImageIndex}
+      />
+      <ProductImage currentImageIndex={currentImageIndex} product={product} />
       <ProductVariations product={product} />
     </div>
   );

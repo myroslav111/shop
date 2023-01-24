@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { products } from '@/components/data/product.data';
+import Catalog from '@/components/ui/catalog/Catalog';
 import Heading from '@/components/ui/heading/Heading';
 
 import Layout from '@/layout/meta/Layout';
@@ -22,6 +24,8 @@ const ProductDetails: FC<IProductDetails> = ({ product }) => {
         </div>
 
         <ProductCard product={product} />
+
+        <Catalog products={products} />
       </Layout>
     </>
   );

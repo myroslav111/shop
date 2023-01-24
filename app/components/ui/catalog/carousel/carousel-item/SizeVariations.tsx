@@ -12,16 +12,23 @@ const SIZES: TypeSize[] = ['SHORT', 'TALL', 'GRANDE', 'VENTI'];
 interface ICarouselVariations {
   selectedSize: TypeSize;
   setSelectedSize: Dispatch<SetStateAction<TypeSize>>;
+  variant?: 'small' | 'medium';
 }
 
 const SizeVariations: FC<ICarouselVariations> = ({
   selectedSize,
-  setSelectedSize
+  setSelectedSize,
+  variant = 'small'
 }) => {
   const { cart } = useCart();
 
   return (
-    <div className={styles.variations}>
+    //cn добавляет еще один клас если выполняется условие
+    <div
+      className={cn(styles.variations, {
+        [styles.medium]: variant === 'medium'
+      })}
+    >
       {SIZES.map(size => (
         <button
           key={size}

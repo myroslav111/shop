@@ -68,7 +68,11 @@
 
 .variations {
   @apply mt-6 grid animate-opacity grid-cols-4 gap-2.5;
-  /* animation: animationOpacity 0.5s; */
+  &.medium {
+    > button {
+      @apply text-[0.8rem];
+    }
+  }
   > button {
     @apply rounded border border-solid border-white bg-transparent px-0.5 py-0.5 text-center text-[0.6rem] font-semibold uppercase text-white transition-colors;
 

@@ -5,7 +5,7 @@ export interface IProduct {
   name: string;
   description: string;
   price: number;
-  reviews: [];
+  reviews: IReview[];
   images: string[];
   slug: string;
 }
