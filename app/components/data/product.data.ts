@@ -1,5 +1,7 @@
 import { IProduct } from '@/types/product.intarface';
 
+import { reviews } from './review.data';
+
 export const products: IProduct[] = [
   {
     id: 1,
@@ -13,7 +15,7 @@ export const products: IProduct[] = [
       '/images/products/Matcha_Tea_Cream_Frappuccino.webp'
     ],
     price: 9,
-    reviews: []
+    reviews: [reviews[0], reviews[1], reviews[2]]
   },
   {
     id: 2,

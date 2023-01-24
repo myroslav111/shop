@@ -1,3 +1,5 @@
+import { IReview } from './reviews.interface';
+
 export interface IProduct {
   id: number;
   name: string;
@@ -6,7 +8,6 @@ export interface IProduct {
   reviews: [];
   images: string[];
   slug: string;
-  //TODO: Add review interface
 }
 
 export interface IProductDetails {

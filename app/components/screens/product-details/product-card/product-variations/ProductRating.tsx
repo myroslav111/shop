@@ -1,8 +1,14 @@
 import { FC, useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
 
-const ProductRating: FC = () => {
-  const [rating, setRating] = useState(0);
+import { IProductDetails } from '@/types/product.intarface';
+
+import styles from '../ProductCard.module.scss';
+
+const ProductRating: FC<IProductDetails> = ({ product }) => {
+  const [rating, setRating] = useState(
+    product.reviews.reduce((acc, review) => acc, 0)
+  );
 
   // Catch Rating value
   const handleRating = (rate: number) => {
@@ -17,13 +23,21 @@ const ProductRating: FC = () => {
     console.log(value, index);
 
   return (
-    <div className='App'>
+    <div className={styles.rating}>
+      <span>Rating:</span>
       <Rating
         onClick={handleRating}
         onPointerEnter={onPointerEnter}
         onPointerLeave={onPointerLeave}
         onPointerMove={onPointerMove}
+        initialValue={rating}
         /* Available Props */
+        SVGstyle={{
+          display: 'inline-block'
+        }}
+        size={34}
+        allowFraction
+        transition
       />
     </div>
   );

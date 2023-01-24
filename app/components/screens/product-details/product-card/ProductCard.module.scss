@@ -36,5 +36,11 @@
   }
 
   .variations {
+    .rating {
+      @apply flex items-center;
+      > span {
+        @apply mr-2 text-sm font-bold;
+      }
+    }
   }
 }
