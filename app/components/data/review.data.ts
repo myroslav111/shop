@@ -1,8 +1,6 @@
 import { IProduct } from '@/types/product.intarface';
 import { IReview } from '@/types/reviews.interface';
 
-import { products } from './product.data';
-
 export const reviews: IReview[] = [
   {
     id: 1,
