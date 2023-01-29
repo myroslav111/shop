@@ -4,3 +4,5 @@ export const formatToCurency = (price: number) => {
     currency: 'USD'
   }).format(price);
 };
+
+//подставляет значек валюты
