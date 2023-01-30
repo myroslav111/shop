@@ -1,6 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-import { cart } from '@/components/data/cart.data';
 
 import {
   IAddToCartPayload,

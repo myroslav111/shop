@@ -11,11 +11,9 @@ import {
 import { FC, useRef, useState } from 'react';
 
 import { useCart } from '@/hooks/useCart';
-import { useTypedSelector } from '@/hooks/useTypedSelector';
 
 import { formatToCurency } from '@/utils/format-to-currency';
 
-// import { cart } from '@/components/data/cart.data';
 import styles from './Cart.module.scss';
 import CartItem from './cart-item/CartItem';
 
