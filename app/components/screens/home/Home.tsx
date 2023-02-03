@@ -6,7 +6,9 @@ import Heading from '@/components/ui/heading/Heading';
 
 import Layout from '@/layout/meta/Layout';
 
-const Home: FC = () => {
+import { IProductsPage } from '@/../pages';
+
+const Home: FC<IProductsPage> = ({ products }) => {
   /* SSR need */
   return (
     <>
