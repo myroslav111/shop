@@ -2,9 +2,10 @@ import { IProduct } from '@/types/product.intarface';
 
 import { reviews } from './review.data';
 
-export const products: IProduct[] = [
+// export
+const products: IProduct[] = [
   {
-    id: 1,
+    _id: '1',
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Caramel Cream Frappuccino',
@@ -18,7 +19,7 @@ export const products: IProduct[] = [
     reviews: [reviews[0], reviews[1], reviews[2]]
   },
   {
-    id: 2,
+    _id: '2',
     description:
       'Medium gerösteter Kaffee mit sanftem, ausgewogenem und reichhaltigem Geschmack',
     name: 'Espresso Vanilla Sirup Premium Hazelnut',
@@ -28,7 +29,7 @@ export const products: IProduct[] = [
     reviews: []
   },
   {
-    id: 3,
+    _id: '3',
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Matcha Tea Cream Frappuccino',
@@ -38,7 +39,7 @@ export const products: IProduct[] = [
     reviews: []
   },
   {
-    id: 4,
+    _id: '4',
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Premium Caramel Hot Chocolate',
@@ -48,7 +49,7 @@ export const products: IProduct[] = [
     reviews: []
   },
   {
-    id: 5,
+    _id: '5',
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Premium Hazelnut Hot Chocolate',
@@ -58,7 +59,7 @@ export const products: IProduct[] = [
     reviews: []
   },
   {
-    id: 6,
+    _id: '6',
     description:
       'Frappuccino® mit Milch, Matcha und Vanilla Sirup, geblendet mit Eiswürfeln und gekrönt mit Sahne',
     name: 'Premium Hot Chocolate Tea Cream',

@@ -2,8 +2,6 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import { FC } from 'react';
 
-import { products } from '@/components/data/product.data';
-
 import { useActions } from '@/hooks/useActions';
 
 import styles from '../carousel-navigations/CarouselNavigation.module.scss';
@@ -26,7 +24,8 @@ const CarouselNavigation: FC<ICarouselNavigation> = ({
             </button>
             <button
               className={styles.arrow}
-              onClick={() => nextSlide({ carouselLength: products.length })}
+              // onClick={() => nextSlide({ carouselLength: products.length })}
+              onClick={() => nextSlide({ carouselLength: 10 })}
             >
               <ChevronRightIcon fontSize={46} />
             </button>
