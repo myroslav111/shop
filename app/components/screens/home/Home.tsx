@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { products } from '@/components/data/product.data';
+// import { products } from '@/components/data/product.data';
 import Catalog from '@/components/ui/catalog/Catalog';
 import Heading from '@/components/ui/heading/Heading';
 

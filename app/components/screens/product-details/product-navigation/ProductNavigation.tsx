@@ -6,7 +6,7 @@ import { FC } from 'react';
 import styles from './ProductNavigation.module.scss';
 import { useProductNavigation } from './useProductNavigation';
 
-const ProductNavigation: FC<{ productId: number }> = ({ productId }) => {
+const ProductNavigation: FC<{ productId: string }> = ({ productId }) => {
   const { nextProductSlug, prevProductSlug } = useProductNavigation(productId);
 
   return (

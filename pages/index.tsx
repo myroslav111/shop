@@ -4,8 +4,7 @@ import Home from '@/components/screens/home/Home';
 
 import { IProduct } from '@/types/product.intarface';
 
-import { axiosClassic } from '@/api/api';
-
+// import { axiosClassic } from '@/api/api';
 import { ProductService } from '@/services/ProductService';
 
 export interface IProductsPage {
@@ -21,9 +20,9 @@ const HomePage: NextPage<IProductsPage> = ({ products }) => {
 };
 
 export const getStaticProps: GetStaticProps<IProductsPage> = async () => {
-  const { data } = await ProductService.getProducts();
+  const products = await ProductService.getProductsByType();
   return {
-    props: { products: data }
+    props: { products }
   };
 };
 

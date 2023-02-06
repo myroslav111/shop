@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {
+    esmExternals: false
+  },
+  env: {
+    REACT_SERVER_URL: process.env.REACT_SERVER_URL
+  },
   async rewrites() {
     return [
       {
