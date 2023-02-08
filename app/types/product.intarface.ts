@@ -8,6 +8,7 @@ export interface IProduct {
   reviews: IReview[];
   images: string[];
   slug: string;
+  productId: number;
 }
 
 export interface IProductDetails {

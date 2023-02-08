@@ -23,9 +23,12 @@ const AddToCartlButton: FC<IAddToCartlButton> = ({
 }) => {
   const { addToCart, removeFromCart } = useActions();
   const { cart } = useCart();
+  console.log('cart', cart);
+  console.log('product._id', product._id);
   const currentElement = cart.find(
     cartItem =>
       cartItem.product._id === product._id && cartItem.size === selectedSize
+    // cartItem.product._id === product._id && cartItem.size === selectedSize
   );
 
   const isSmall = variant === 'small';

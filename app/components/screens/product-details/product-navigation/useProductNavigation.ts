@@ -1,11 +1,14 @@
-import { products } from '@/components/data/product.data';
+import { IProduct } from '@/types/product.intarface';
 
-export const useProductNavigation = (productId: string) => {
+export const useProductNavigation = (
+  productId: number,
+  products: IProduct[]
+) => {
   const nextProductSlug = products.find(
-    product => product.id === productId + 1
+    product => product.productId === productId + 1
   )?.slug;
   const prevProductSlug = products.find(
-    product => product.id === productId - 1
+    product => product.productId === productId - 1
   )?.slug;
 
   return {
