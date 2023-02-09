@@ -7,7 +7,8 @@ export interface ICartInitialState {
 /**
  * Omit --> расширяем interface IAddToCartPayload --> ICartItem но без поля id
  */
-export interface IAddToCartPayload extends Omit<ICartItem, 'id'> {}
+// export interface IAddToCartPayload extends Omit<ICartItem, 'id'> {}
+export interface IAddToCartPayload extends ICartItem {}
 
 /**
  * Pick берет одно поле 'id с расширяемого interface

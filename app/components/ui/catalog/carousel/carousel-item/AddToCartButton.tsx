@@ -23,14 +23,13 @@ const AddToCartlButton: FC<IAddToCartlButton> = ({
 }) => {
   const { addToCart, removeFromCart } = useActions();
   const { cart } = useCart();
-  console.log('cart', cart);
-  console.log('product._id', product._id);
   const currentElement = cart.find(
     cartItem =>
+      // cartItem.product._id === product._id && cartItem.size === selectedSize
       cartItem.product._id === product._id && cartItem.size === selectedSize
-    // cartItem.product._id === product._id && cartItem.size === selectedSize
   );
-
+  console.log(currentElement);
+  console.log(cart);
   const isSmall = variant === 'small';
   return (
     <div className='text-center'>
@@ -41,7 +40,8 @@ const AddToCartlButton: FC<IAddToCartlButton> = ({
             : addToCart({
                 product,
                 quantity: 1,
-                size: selectedSize
+                size: selectedSize,
+                id: Math.random()
               })
         }
         color={isSmall ? COLORS.green : COLORS.white}

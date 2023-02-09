@@ -16,10 +16,12 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<IAddToCartPayload>) => {
       const isExistSize = state.items.some(
-        item => item.size === action.payload.size
+        item =>
+          item.size === action.payload.size && item.id === action.payload.id
       );
       if (!isExistSize)
-        state.items.push({ ...action.payload, id: state.items.length });
+        // state.items.push({ ...action.payload, id: state.items.length });
+        state.items.push({ ...action.payload });
     },
     removeFromCart: (state, action: PayloadAction<{ id: number }>) => {
       state.items = state.items.filter(item => item.id !== action.payload.id);

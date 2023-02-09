@@ -64,7 +64,7 @@ const Cart: FC = () => {
                 <div>total:</div>
                 <div>{formatToCurency(total)}</div>
               </div>
-              <Button colorScheme='whatsapp'>Checkout</Button>
+              <Button colorScheme='whatsapp'>Buy now</Button>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
