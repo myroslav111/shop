@@ -10,7 +10,7 @@ export const menu: IMenuLink[] = [
     name: 'Tee'
   },
   {
-    link: '/menu',
+    link: '/menu-shop/MenuShop',
     name: 'Menu'
   }
 ];
