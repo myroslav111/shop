@@ -13,16 +13,18 @@ import storage from 'redux-persist/lib/storage';
 
 import { carouselSlice } from './carousel/carousel.slice';
 import { cartSlice } from './cart/cart.slice';
+import { filterSlice } from './filterSearch/filterSearch.slice';
 
 const persistConfig = {
   key: 'coffee-shop',
   storage,
-  whitelist: ['cart']
+  whitelist: ['cart', 'filterSearch']
 };
 
 const rootReducer = combineReducers({
   cart: cartSlice.reducer,
-  carousel: carouselSlice.reducer
+  carousel: carouselSlice.reducer,
+  filterSearch: filterSlice.reducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
