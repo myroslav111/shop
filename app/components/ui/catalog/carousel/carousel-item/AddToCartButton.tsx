@@ -28,6 +28,7 @@ const AddToCartlButton: FC<IAddToCartlButton> = ({
       // cartItem.product._id === product._id && cartItem.size === selectedSize
       cartItem.product._id === product._id && cartItem.size === selectedSize
   );
+
   const isSmall = variant === 'small';
   return (
     <div className='text-center'>
