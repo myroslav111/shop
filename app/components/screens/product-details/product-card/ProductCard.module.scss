@@ -1,9 +1,9 @@
 .card {
-  @apply relative my-8 grid grid-cols-3 gap-5 bg-ligt-gray p-10;
-  border-radius: 2rem;
+  @apply relative my-8 flex-col rounded bg-ligt-gray p-3 lg:grid lg:grid-cols-3 lg:gap-5 lg:rounded-xl lg:p-10;
+  /* border-radius: 2rem; */
   .information {
     > h1 {
-      @apply mb-5 text-3xl font-bold leading-tight text-darck-beige;
+      @apply mb-1 text-2xl font-bold leading-tight text-darck-beige lg:mb-5 lg:text-3xl;
 
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -11,7 +11,7 @@
       overflow: hidden;
     }
     > div {
-      @apply mb-12;
+      @apply mb-4 lg:mb-12;
       > p {
         @apply text-beige;
       }
@@ -27,10 +27,10 @@
   .image {
     @apply text-center;
     .main {
-      @apply mx-auto flex h-[18.4rem] w-[18.4rem] items-center justify-center overflow-hidden rounded-full bg-white;
+      @apply mx-auto flex h-[13.4rem] w-[13.4rem] items-center justify-center overflow-hidden rounded-full bg-white lg:h-[18.4rem] lg:w-[18.4rem];
       box-shadow: 0px 5px 100px -50px #6c946b;
       img {
-        @apply -mt-10;
+        @apply -mt-10 w-4/6;
       }
     }
     .price {
@@ -40,7 +40,7 @@
 
   .variations {
     .rating {
-      @apply flex items-center;
+      @apply mt-5 flex items-center justify-center lg:mt-0;
       > span {
         @apply mr-2 text-sm font-bold;
       }

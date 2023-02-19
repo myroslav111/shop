@@ -16,7 +16,7 @@ const Home: FC<IProductsPage> = ({ products }) => {
         title='Home'
         description='Probiere jetzt unseren neuen Caramelised Macadamia Oat Latte 🌰 und unseren Klassiker Honey Hazelnut Oat Latte 🍯'
       >
-        <Heading className='text-right'>The happiest hour of the year </Heading>
+        <Heading>The happiest hour of the year </Heading>
         <Catalog products={products} />
       </Layout>
     </>

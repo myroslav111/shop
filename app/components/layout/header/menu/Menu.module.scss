@@ -1,9 +1,9 @@
 .menu {
-  @apply flex items-center gap-10;
+  @apply items-center gap-10 lg:flex;
 
   > nav {
     > ul {
-      @apply flex items-center gap-6;
+      @apply hidden items-center gap-6 lg:flex;
       > li {
         > a {
           @apply relative uppercase tracking-widest;
