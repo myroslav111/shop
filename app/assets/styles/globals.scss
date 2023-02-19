@@ -87,3 +87,14 @@ h6 {
   color: black;
   opacity: 0.2 !important;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, grey);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #6c946b);
+}
