@@ -27,7 +27,7 @@ const ProductRating: FC<IProductDetails> = ({ product }) => {
 
   return (
     <div className={styles.rating}>
-      <span>Rating:</span>
+      <span className='hidden lg:block'>Rating:</span>
       <Rating
         onClick={handleRating}
         onPointerEnter={onPointerEnter}

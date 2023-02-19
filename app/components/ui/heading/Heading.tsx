@@ -8,7 +8,7 @@ const Heading: FC<PropsWithChildren<{ className?: string }>> = ({
   return (
     <h1
       className={cn(
-        'text-right leading-tight font-black text-green text-6xl w-2/3 ml-auto',
+        'text-right leading-tight font-black text-green text-2xl lg:text-6xl lg:w-2/3 ml-auto ',
         className
       )}
     >

@@ -1,5 +1,5 @@
 .search {
-  @apply relative w-2/6;
+  @apply hidden w-2/6 lg:relative lg:block;
 
   > div {
     @apply relative;
