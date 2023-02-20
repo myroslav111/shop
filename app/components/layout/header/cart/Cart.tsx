@@ -9,6 +9,7 @@ import {
   DrawerOverlay
 } from '@chakra-ui/react';
 import { FC, useRef, useState } from 'react';
+import { CiShoppingCart } from 'react-icons/ci';
 
 import { useCart } from '@/hooks/useCart';
 
@@ -31,7 +32,9 @@ const Cart: FC = () => {
         ref={btnRef}
       >
         <span className={styles.badge}>{cart.length}</span>
-        <span className={styles.text}>MY BASKET</span>
+        <span className={styles.text}>
+          <CiShoppingCart />
+        </span>
       </button>
       {isOpen && (
         <Drawer

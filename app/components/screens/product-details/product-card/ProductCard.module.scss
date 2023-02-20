@@ -1,6 +1,15 @@
 .card {
-  @apply relative my-8 flex-col rounded bg-ligt-gray p-3 lg:grid lg:grid-cols-3 lg:gap-5 lg:rounded-xl lg:p-10;
-  /* border-radius: 2rem; */
+  @apply relative my-8 flex-col rounded bg-transparent p-3 lg:grid lg:grid-cols-3 lg:gap-5 lg:rounded-xl lg:p-10;
+  /* border-radius: 2rem;  bg-black*/
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #e7ebf0;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 196, 96, 0.08757006220456931) 132%,
+    rgba(255, 255, 255, 1) 100%
+  );
   .information {
     > h1 {
       @apply mb-1 text-2xl font-bold leading-tight text-darck-beige lg:mb-5 lg:text-3xl;
@@ -17,9 +26,11 @@
       }
     }
     > button {
-      @apply mr-4 rounded-2xl bg-white transition-colors ease-linear last:mr-0;
+      @apply mr-4 rounded-2xl bg-transparent transition-colors ease-linear last:mr-0;
       &.active {
-        @apply bg-green;
+        @apply bg-white;
+        box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%),
+          0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
       }
     }
   }
@@ -45,5 +56,8 @@
         @apply mr-2 text-sm font-bold;
       }
     }
+    /* &.buttonCardDetails {
+      @apply bg-black;
+    } */
   }
 }
