@@ -1,10 +1,8 @@
 import cn from 'clsx';
-import { useRouter } from 'next/router';
 import { Dispatch, FC, SetStateAction } from 'react';
 
 import { TypeSize } from '@/store/cart/cart.types';
 
-// import { useCart } from '@/hooks/useCart';
 import styles from '../Carousel.module.scss';
 
 const SIZES: TypeSize[] = ['SHORT', 'TALL', 'GRANDE', 'VENTI'];
@@ -20,8 +18,6 @@ const SizeVariations: FC<ICarouselVariations> = ({
   setSelectedSize,
   variant = 'small'
 }) => {
-  // const { cart } = useCart();
-  // const router = useRouter();
 
   return (
     //cn добавляет еще один клас если выполняется условие

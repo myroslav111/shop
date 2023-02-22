@@ -1,3 +1,4 @@
+import { SearchIcon } from '@chakra-ui/icons';
 import {
   Button,
   Drawer,
@@ -8,8 +9,10 @@ import {
   DrawerHeader,
   DrawerOverlay
 } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
 import { FC, useRef, useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
+import { MdAddShoppingCart, MdOutlineLocalGroceryStore } from 'react-icons/md';
 
 import { useCart } from '@/hooks/useCart';
 
@@ -33,7 +36,9 @@ const Cart: FC = () => {
       >
         <span className={styles.badge}>{cart.length}</span>
         <span className={styles.text}>
-          <CiShoppingCart />
+          {/* <Icon as={MdOutlineLocalGroceryStore} /> */}
+          {/* <MdAddShoppingCart /> */}
+          <MdOutlineLocalGroceryStore />
         </span>
       </button>
       {isOpen && (
