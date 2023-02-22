@@ -5,7 +5,7 @@
 }
 .item {
   @apply relative mb-28 cursor-pointer rounded-3xl bg-ligt-gray p-5 pt-0 lg:mb-14;
-
+  /* min-h-[380px] */
   .heading {
     @apply block text-left text-xl font-bold leading-7 text-beige;
 
@@ -19,7 +19,6 @@
   }
   .description {
     @apply mt-5 animate-opacity text-sm text-beige opacity-90;
-    /* animation: animationOpacity 0.5s; */
   }
 
   > div {
@@ -49,7 +48,7 @@
     background-size: 120%;
     will-change: transform;
     backface-visibility: hidden;
-    /* box-shadow: 0 3px 6px; */
+
     &::before {
       @apply absolute left-0 top-0 h-full w-full rounded-3xl;
       content: '';
@@ -58,7 +57,6 @@
         rgba(108, 148, 107, 1) 45%,
         rgba(255, 255, 255, 0.4) 130%
       );
-      /* animation: animationOpacity 0.4s; */
     }
     .heading {
       @apply text-3xl leading-9 text-white;

@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import ProductDetails from '@/components/screens/product-details/ProductDetails';
+import Loader from '@/components/ui/loader/Loader';
 
 import { IProduct, IProductDetails } from '@/types/product.intarface';
 
