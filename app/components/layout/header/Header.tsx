@@ -1,5 +1,8 @@
 import { FC } from 'react';
 
+import BurgerMenu from '../../burger-menu/BurgerMenu';
+import ButtonTop from '../../button-top/ButtonTop';
+
 import styles from './Header.module.scss';
 import Cart from './cart/Cart';
 import Menu from './menu/Menu';
@@ -11,6 +14,8 @@ const Header: FC = () => {
       <Menu />
       <Search />
       <Cart />
+      <BurgerMenu />
+      <ButtonTop />
     </header>
   );
 };
