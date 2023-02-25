@@ -1,0 +1,41 @@
+@import 'app/assets/styles/_variables.scss';
+
+.wrpaperButtonTop {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  transition-duration: 500ms;
+  z-index: 5;
+
+  &:hover {
+    transform: scale(1.5);
+    transition-duration: 500ms;
+  }
+}
+
+.visibleButtonTop {
+  opacity: 100;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+
+  color: $green;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+}
+
+.notVisibleButtonTop {
+  opacity: 0;
+}
+
+.iconButtonTop {
+  height: 1.5rem;
+  width: 1.5rem;
+}
