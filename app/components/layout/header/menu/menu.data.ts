@@ -10,7 +10,7 @@ export const menu: IMenuLink[] = [
     name: 'Awards'
   },
   {
-    link: '/aboutUs',
+    link: '/about-us/AboutUs',
     name: 'About Us'
   }
 ];
