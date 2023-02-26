@@ -1,5 +1,5 @@
 .menu {
-  @apply items-center gap-10 lg:flex;
+  @apply items-center gap-10 lg:flex lg:border-b-2;
 
   > nav {
     > ul {
