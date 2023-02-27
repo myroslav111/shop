@@ -27,7 +27,13 @@ const Card: FC<ICard> = ({ img, title, description, path, fromPage }) => {
       <div className={styles.wrapContent}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.paragraf}>{description}</p>
-        <Stack direction='row' spacing={4}>
+        <Stack
+          position={'absolute'}
+          right={'1.5'}
+          bottom={'1.5'}
+          direction='row'
+          spacing={4}
+        >
           <Button
             rightIcon={<ArrowForwardIcon />}
             colorScheme='teal'

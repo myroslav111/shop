@@ -4,7 +4,6 @@ import Home from '@/components/screens/home/Home';
 
 import { IProduct } from '@/types/product.intarface';
 
-// import { axiosClassic } from '@/api/api';
 import { ProductService } from '@/services/ProductService';
 
 export interface IProductsPage {
