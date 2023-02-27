@@ -5,6 +5,10 @@
 }
 .item {
   @apply relative mb-28 cursor-pointer rounded-3xl bg-ligt-gray p-5 pt-0 lg:mb-14;
+  /* background: rgba(255, 255, 255, 0.05); */
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+  backdrop-filter: blur(15px);
   /* min-h-[380px] */
   .heading {
     @apply block text-left text-xl font-bold leading-7 text-beige;
