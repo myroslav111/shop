@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import { SearchIcon } from '@chakra-ui/icons';
+=======
+import { DeleteIcon } from '@chakra-ui/icons';
+>>>>>>> Stashed changes
 import {
   Button,
   Drawer,
@@ -34,12 +38,20 @@ const Cart: FC = () => {
         onClick={e => setIsOpen(!isOpen)}
         ref={btnRef}
       >
+<<<<<<< Updated upstream
         <span className={styles.badge}>{cart.length}</span>
         <span className={styles.text}>
           {/* <Icon as={MdOutlineLocalGroceryStore} /> */}
           {/* <MdAddShoppingCart /> */}
           <MdOutlineLocalGroceryStore />
         </span>
+=======
+        <span className={styles.badge}>
+          <DeleteIcon />
+          {/* {cart.length} */}
+        </span>
+        <span className={styles.text}>MY BASKET</span>
+>>>>>>> Stashed changes
       </button>
       {isOpen && (
         <Drawer

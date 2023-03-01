@@ -1,3 +1,5 @@
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import { card } from '@/components/data/card.data';
@@ -10,6 +12,7 @@ import AccordionText from '../../ui/accordion/AccordionText';
 
 const MenuPage: FC = () => {
   return (
+<<<<<<< Updated upstream
     <Layout title='Menu' description='products'>
       <div className='flex'>
         <div className='hidden lg:w-1/3 lg:h-full lg:block bg-dark-green '>
@@ -38,6 +41,18 @@ const MenuPage: FC = () => {
         </div>
       </div>
     </Layout>
+=======
+    <div>
+      Menu
+      <Breadcrumb color='#444' display='flex' justifyContent='center'>
+        <BreadcrumbItem>
+          <BreadcrumbLink as={Link} href='/'>
+            Back to Home
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+    </div>
+>>>>>>> Stashed changes
   );
 };
 

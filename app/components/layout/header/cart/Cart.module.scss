@@ -4,6 +4,9 @@
     .badge {
       @apply mr-1 flex h-5 w-5 items-center justify-center rounded-full bg-green p-1 text-sm text-white;
     }
+    &:hover {
+      @apply rounded-2xl bg-green;
+    }
 
     .text {
       @apply text-2xl text-dark-green;
