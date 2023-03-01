@@ -1,0 +1,23 @@
+@import 'app/assets/styles/_variables.scss';
+
+.wrapperAboutUs {
+  color: #1f1f1f;
+}
+
+.titleAboutUs {
+  font-size: 1.7rem;
+}
+
+.isVisible {
+  display: inline;
+}
+
+.isHidden {
+  display: none;
+}
+
+.readMoreBtn {
+  margin-top: 10px;
+  background-color: $green;
+  border-radius: 8px;
+}
