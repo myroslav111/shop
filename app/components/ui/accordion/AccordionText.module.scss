@@ -1,0 +1,23 @@
+@import 'app/assets/styles/_variables.scss';
+
+.isVisibleAccordionText {
+  display: none;
+}
+
+.readMoreBtnAccordionText {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .isVisibleAccordionText {
+    display: inline;
+  }
+
+  .isHiddenAccordionText {
+    display: none;
+  }
+
+  .readMoreBtnAccordionText {
+    @apply block w-full text-green;
+  }
+}

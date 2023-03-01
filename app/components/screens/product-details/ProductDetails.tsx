@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import Catalog from '@/components/ui/catalog/Catalog';
 import Heading from '@/components/ui/heading/Heading';
