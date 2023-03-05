@@ -1,0 +1,15 @@
+@import 'app/assets/styles/_variables.scss';
+
+.sidebarAboutUs {
+  margin-right: 0.5rem /* 8px */;
+  width: 33.333333%;
+  background-color: $green;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .sidebarAboutUs {
+    width: 100%;
+    margin-bottom: 0.5rem /* 8px */;
+  }
+}
