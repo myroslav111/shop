@@ -1,0 +1,23 @@
+@import 'app/assets/styles/_variables.scss';
+
+.socialWrapper {
+  margin-top: 10px;
+  background-color: $green;
+}
+
+.socialList {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.socialItem {
+  color: $darck-beige;
+  transition-duration: 500ms;
+
+  &:hover {
+    color: $black;
+    transform: scale(1.2);
+    transition-duration: 500ms;
+  }
+}

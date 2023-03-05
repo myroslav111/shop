@@ -6,7 +6,7 @@ export const card: ICard[] = [
     title: 'Unsere Getränke',
     description:
       'Großartige Kaffees aus der ganzen Welt und handgefertigte Getränke zum Entdecken und Genießen.',
-    path: '/',
+    path: '/drink/Drink',
     fromPage: 'drink'
   },
   {
@@ -14,7 +14,7 @@ export const card: ICard[] = [
     title: 'Unsere Speisen',
     description:
       'Unser Gebäck und unsere Sandwiches werden mit hochwertigen Zutaten sorgfältig zubereitet, um deinen Genuss vollkommen zu machen.',
-    path: '/',
+    path: '/desert/Desert',
     fromPage: 'desert'
   }
 ];
