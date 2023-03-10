@@ -12,8 +12,10 @@ const MenuPage: FC = () => {
   return (
     <Layout title='Menu' description='products'>
       <div className='flex'>
-        <div className='hidden lg:w-1/3 lg:h-full lg:block bg-dark-green '>
-          <h2 className='text-center text-4xl text-green'>MENU</h2>
+        {/* mr-2 w-1/3 bg-dark-green text-center */}
+        <div className='hidden lg:w-1/3 lg:block bg-dark-green text-center'>
+          MENU
+          {/* <h2 className='text-center text-4xl text-green'></h2> */}
         </div>
         <div className='mx-auto px-4'>
           <h1 className='text-2xl text-black font-bold mb-4'>Unser Angebot</h1>

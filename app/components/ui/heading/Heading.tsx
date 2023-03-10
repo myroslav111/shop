@@ -5,7 +5,6 @@ const Heading: FC<PropsWithChildren<{ className?: string }>> = ({
   children,
   className
 }) => {
-  console.log(className);
   return (
     <h1
       className={cn(
