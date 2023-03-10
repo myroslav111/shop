@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
+import Socials from '@/components/socials/Socials';
+
 import Layout from '@/layout/meta/Layout';
+import Sidebar from '@/layout/sidebar/Sidebar';
 
 import { textContentOnAboutPage } from '../../data/text-info/text-info.data';
 
@@ -11,16 +14,14 @@ const AboutCompany: FC = () => {
   return (
     <>
       <Layout title='AboutCompany' description='About Company'>
-        <div className='flex'>
-          <div className='mr-2 w-1/3 bg-dark-green text-center'>
-            I am sidebar
-          </div>
+        <div className={styles.containerWrapperAboutUs}>
+          <Sidebar />
 
           <div className={styles.wrapperAboutUs}>
             <Image
               src={'/images/about-us/AboutUs.jpg'}
               alt={'Image Cafe'}
-              width={500}
+              width={900}
               height={200}
             />
             {textContentOnAboutPage.map(el => (
@@ -31,6 +32,8 @@ const AboutCompany: FC = () => {
                 </strong>
               </section>
             ))}
+
+            <Socials />
 
             {/* //! Native HTML */}
             {/* //! <details>
