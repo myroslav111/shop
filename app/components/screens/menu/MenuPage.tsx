@@ -12,6 +12,7 @@ import AccordionText from '../../ui/accordion/AccordionText';
 const MenuPage: FC = () => {
   return (
     <Layout title='Menu' description='products'>
+
       <div className='lg:flex lg:flex-row flex-col'>
         {/* <div className='hidden lg:w-1/3 lg:h-full lg:block bg-dark-green '>
           <h2 className='text-center text-4xl text-green'>MENU</h2>
