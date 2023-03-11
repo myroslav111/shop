@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import logo from '../../../../../public/images/products/coffee.png';
+import logo from '../../../../../public/images/coffee.png';
 
 import styles from './Menu.module.scss';
 import MenuItem from './menu-item/MenuItem';
