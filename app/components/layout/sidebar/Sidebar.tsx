@@ -1,4 +1,4 @@
-import logo from '/public/images/products/coffee.png';
+import logo from '/public/images/coffee.png';
 import Image from 'next/image';
 import { FC } from 'react';
 
