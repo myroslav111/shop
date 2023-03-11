@@ -13,7 +13,6 @@ export interface IProductDetailsPage {
 }
 
 const ProductDetailsPage: NextPage<IProductDetailsPage> = props => {
-  //?fff
   return <ProductDetails product={props.product} products={props.products} />;
 };
 
