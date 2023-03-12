@@ -1,8 +1,9 @@
 @import 'app/assets/styles/_variables.scss';
 
 .socialWrapper {
+  @apply p-3;
   margin-top: 10px;
-  background-color: $green;
+  /* background-color: $green; */
 }
 
 .socialList {
@@ -12,11 +13,14 @@
 }
 
 .socialItem {
+  @apply p-2;
   color: $darck-beige;
   transition-duration: 500ms;
 
   &:hover {
-    color: $black;
+    @apply rounded bg-light-green;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 0px 8px;
     transform: scale(1.2);
     transition-duration: 500ms;
   }
