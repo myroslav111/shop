@@ -1,0 +1,92 @@
+.wrapperAwards {
+  background: #0e101c;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  height: 100%;
+}
+
+.formAwards {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #0e101c;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.paragraphAwards {
+  color: #bf1650;
+}
+
+.paragraphAwards::before {
+  display: inline;
+  content: '⚠ ';
+}
+
+.descriptionAwards {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #0e101c;
+  resize: none;
+}
+
+.inputAwards {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #0e101c;
+}
+
+.labelAwards {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.buttonAwards {
+  background: #ec5990;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+.buttonAwards:hover {
+  background: #bf1650;
+}
+
+.buttonAwards:active {
+  transition: 0.3s all;
+  transform: translateY(3px);
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+
+.buttonAwards {
+  display: block;
+  appearance: none;
+  margin-top: 40px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}

@@ -6,7 +6,7 @@ export const menu: IMenuLink[] = [
     name: 'Menu'
   },
   {
-    link: '/awards',
+    link: '/awards/Awards',
     name: 'Awards'
   },
   {
