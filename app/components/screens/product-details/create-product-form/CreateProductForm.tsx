@@ -69,7 +69,7 @@ const CreateProductForm: FC = () => {
         <FormControl isRequired={true}>
           <form
             onSubmit={submitForm}
-            className='flex flex-col w-1/3 justify-center mx-auto bg-f7f7f7 w-full'
+            className='flex flex-col w-1/3 justify-center mx-auto bg-f7f7f7'
           >
             <h2 className='text-right leading-tight font-black text-green text-2xl lg:text-3xl  mb-8'>
               Create Product Form
