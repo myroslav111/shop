@@ -1,6 +1,6 @@
 import { EnumSorting } from '@/components/ui/catalog/sorting/sorting.interface';
 
-import { IProduct } from '@/types/product.intarface';
+import { ICreateNewProductType, IProduct } from '@/types/product.intarface';
 
 import { axiosClassic } from '@/api/api';
 
@@ -8,6 +8,15 @@ const PRODUCTS = '/products';
 const PRODUCTS_RELATIVES = '/products/relatives';
 const PRODUCTS_SLUG = '/products/slug';
 export const ProductService = {
+  async createProduct(dataProduct: ICreateNewProductType) {
+    try {
+      const { data } = await axiosClassic.post(`${PRODUCTS}/`, dataProduct);
+      console.log('🚀 ~ data:', data);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
   async getProducts() {
     return await axiosClassic.get<IProduct[]>(`${PRODUCTS}`);
   },

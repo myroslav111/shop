@@ -12,5 +12,9 @@ export const menu: IMenuLink[] = [
   {
     link: '/about-us/AboutUs',
     name: 'About Us'
+  },
+  {
+    link: '/create-product/CreateNewProduct',
+    name: 'Create-product'
   }
 ];
