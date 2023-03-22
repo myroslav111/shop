@@ -21,7 +21,8 @@ const Search: FC = () => {
   };
   const visible =
     router.pathname === '/menu-shop/MenuShop' ||
-    router.pathname === '/about-us/AboutUs';
+    router.pathname === '/about-us/AboutUs' ||
+    router.pathname === '/create-product/CreateNewProduct';
 
   return (
     <>
