@@ -44,11 +44,13 @@ const CreateProductHookForm: FC = () => {
 
   const onSubmit: SubmitHandler<ICreateNewProductType> = objDataProduct => {
     objDataProduct.price = Number(objDataProduct.price);
+    objDataProduct.urls = urls;
     console.log(objDataProduct);
-    // axios.post(
-    //   'https://api-shop-express.onrender.com/api/products/',
-    //   objDataProduct
-    // );
+    console.log(urls);
+    axios.post(
+      'https://api-shop-express.onrender.com/api/products/',
+      objDataProduct
+    );
     // axios.post('https://localhost:4200/api/products/', objDataProduct);
   };
 

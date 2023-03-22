@@ -1,27 +1,11 @@
 import { Input, Radio, RadioGroup, Stack } from '@chakra-ui/react';
-import {
-  FormControl,
-  FormErrorMessage,
-  FormHelperText,
-  FormLabel
-} from '@chakra-ui/react';
-import axios from 'axios';
+import { FormControl } from '@chakra-ui/react';
+// import axios from 'axios';
 import { FC, useState } from 'react';
 
 import Layout from '@/layout/meta/Layout';
 
 import { ICreateNewProductType } from '@/types/product.intarface';
-
-import { ProductService } from '@/services/ProductService';
-
-// _id: string;
-//   name: string;
-//   description: string;
-//   price: number;
-//   reviews: IReview[];
-//   images: string[];
-//   slug: string;
-//   productId: number;
 
 const CreateProductForm: FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -72,12 +56,11 @@ const CreateProductForm: FC = () => {
       typeProduct
     };
     console.log('objDataProduct', objDataProduct);
-    // ProductService.createProduct(objDataProduct);
     // axios.post(
     //   'https://api-shop-express.onrender.com/api/products/',
     //   objDataProduct
     // );
-    return resetForm();
+    // axios.post('https://localhost:4200/api/products/', objDataProduct);
   };
 
   return (

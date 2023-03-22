@@ -13,9 +13,6 @@ const Search: FC = () => {
   const [searchTerm, setSearchTerm] = useState(value);
   const { filterItems } = useActions();
   const router = useRouter();
-  // /menu-shop/MenuShop
-  // /about-us/AboutUs
-  console.log(router.pathname === '/menu-shop/MenuShop');
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     let valueInput: string = e.currentTarget.value;
