@@ -1,5 +1,18 @@
+import { Input, Radio, RadioGroup, Stack } from '@chakra-ui/react';
+import {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel
+} from '@chakra-ui/react';
 import axios from 'axios';
 import { FC, useState } from 'react';
+
+import Layout from '@/layout/meta/Layout';
+
+import { ICreateNewProductType } from '@/types/product.intarface';
+
+import { ProductService } from '@/services/ProductService';
 
 // _id: string;
 //   name: string;
@@ -15,10 +28,19 @@ const CreateProductForm: FC = () => {
   const [name, setName] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [price, setPrice] = useState<number | null>(null);
+  const [typeProduct, setTypeProduct] = useState<string>('');
 
   const [urls, setUrls] = useState<
     Array<string | undefined | ArrayBuffer | null>
   >([]);
+
+  const resetForm = () => (
+    setName(''),
+    setDescription(''),
+    setPrice(null),
+    setUrls([]),
+    setTypeProduct('')
+  );
 
   const convertBase64 = (file: any): void => {
     const fileReader = new FileReader();
@@ -42,52 +64,84 @@ const CreateProductForm: FC = () => {
 
   const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const objDataProduct = {
+    const objDataProduct: ICreateNewProductType = {
       name,
       description,
       price,
-      urls
+      urls,
+      typeProduct
     };
     console.log('objDataProduct', objDataProduct);
-    try {
-      const fetch = await axios.post(
-        'http://localhost:4200/api/products/',
-        objDataProduct
-      );
-      const data = fetch.data;
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+    // ProductService.createProduct(objDataProduct);
+    // axios.post(
+    //   'https://api-shop-express.onrender.com/api/products/',
+    //   objDataProduct
+    // );
+    return resetForm();
   };
-  // http://localhost:4200/api/products/
 
   return (
-    <form
-      onSubmit={submitForm}
-      className='flex flex-col w-1/3 justify-center mx-auto'
-    >
-      CreateProductForm
-      <input
-        onChange={e => setName(e.target.value)}
-        className='border-solid'
-        type='text'
-      />
-      <input
-        onChange={e => setDescription(e.target.value)}
-        className='border-solid'
-        type='text'
-      />
-      <input
-        onChange={e => setPrice(+e.target.value)}
-        className='border-solid'
-        type='number'
-      />
-      <input onChange={uploadImage} className='' type='file' multiple />
-      <button className='rounded-full bg-purple' type='submit'>
-        send
-      </button>
-    </form>
+    <>
+      <Layout title='CreateNewProduct' description='Create New Product'>
+        <FormControl isRequired={true}>
+          <form
+            onSubmit={submitForm}
+            className='flex flex-col w-1/3 justify-center mx-auto bg-f7f7f7 w-full'
+          >
+            <h2 className='text-right leading-tight font-black text-green text-2xl lg:text-3xl  mb-8'>
+              Create Product Form
+            </h2>
+            {/* <h2 className='mb-8 text-center text-xl'>CreateProductForm</h2> */}
+            <Input
+              onChange={e => setName(e.target.value)}
+              type='text'
+              variant='flushed'
+              placeholder='Name'
+              focusBorderColor='black'
+              className='mb-8'
+              autoComplete='off'
+            />
+
+            <Input
+              onChange={e => setDescription(e.target.value)}
+              type='text'
+              variant='flushed'
+              placeholder='Description'
+              focusBorderColor='black'
+              className='mb-8'
+            />
+            <Input
+              onChange={e => setPrice(+e.target.value)}
+              type='number'
+              variant='flushed'
+              placeholder='Price'
+              focusBorderColor='black'
+              className='mb-8'
+            />
+            <Input
+              onChange={uploadImage}
+              className='mb-8'
+              type='file'
+              multiple
+              accept='.jpeg, .png, .jpg'
+            />
+            <RadioGroup defaultValue='drink' onChange={e => setTypeProduct(e)}>
+              <Stack spacing={5} direction='row' className='mb-8'>
+                <Radio colorScheme='green' value='dessert'>
+                  Dessert
+                </Radio>
+                <Radio colorScheme='green' value='drink'>
+                  Drink
+                </Radio>
+              </Stack>
+            </RadioGroup>
+            <button className='rounded-full bg-green text-white' type='submit'>
+              send
+            </button>
+          </form>
+        </FormControl>
+      </Layout>
+    </>
   );
 };
 
