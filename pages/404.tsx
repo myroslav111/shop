@@ -2,6 +2,8 @@ import { useRouter } from 'next/router';
 import { FC } from 'react';
 import { useEffect } from 'react';
 
+import ErrorPage from '@/components/screens/error-page/ErrorPage';
+
 const Error: FC = () => {
   const router = useRouter();
 
@@ -13,9 +15,7 @@ const Error: FC = () => {
 
   return (
     <>
-      <div className='min-h-screen flex justify-center items-center'>
-        <h1 className=''>404: after 3 sec beck to home</h1>
-      </div>
+      <ErrorPage />
     </>
   );
 };
