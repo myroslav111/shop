@@ -16,6 +16,9 @@ import CarouselNavigation from './carousel-navigations/CarouselNavigation';
 import { ICarouselItem } from './carousel.iterface';
 
 const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
+  const [drinkTrue, setDrinkTrue] = useState<boolean>(
+    product.typeProduct === 'drink'
+  );
   const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
 
   const { selectedItemIndex } = useCarousel();
@@ -47,10 +50,15 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
 
         {isActive ? (
           <>
-            <SizeVariations
-              selectedSize={selectedSize}
-              setSelectedSize={setSelectedSize}
-            />
+            {drinkTrue ? (
+              <SizeVariations
+                selectedSize={selectedSize}
+                setSelectedSize={setSelectedSize}
+              />
+            ) : (
+              true
+            )}
+
             <AddToCartButton product={product} selectedSize={selectedSize} />
             <Link href={`/product/${product.slug}`} className={styles.link}>
               More information
