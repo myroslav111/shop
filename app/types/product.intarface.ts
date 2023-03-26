@@ -1,5 +1,12 @@
 import { IReview } from './reviews.interface';
 
+export type typeProducts = 'drink' | 'dessert';
+
+export enum EnumProductType {
+  DRINK = 'drink',
+  DESSERT = 'dessert'
+}
+
 export interface IProduct {
   _id: string;
   name: string;
@@ -9,7 +16,8 @@ export interface IProduct {
   images: string[];
   slug: string;
   productId: number;
-  typeProduct: 'drink' | 'dessert';
+  typeProduct: typeProducts;
+  // typeProduct: 'drink' | 'dessert';
 }
 
 export interface IProductDetails {

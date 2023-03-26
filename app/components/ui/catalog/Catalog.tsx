@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 
-import { IProduct } from '@/types/product.intarface';
+import { EnumProductType, IProduct } from '@/types/product.intarface';
 
 import Loader from '../loader/Loader';
 
@@ -15,6 +15,7 @@ const Catalog: FC<{ products: IProduct[]; productId?: string }> = ({
   productId
 }) => {
   const [sortType, setSortType] = useState<EnumSorting>(EnumSorting.NEWEST);
+
   const { data, isLoading } = useQuery(
     ['products', sortType],
     () => {
@@ -26,6 +27,26 @@ const Catalog: FC<{ products: IProduct[]; productId?: string }> = ({
     { initialData: products }
   );
 
+  const getRelativeProducts = () => {
+    const productType = products.find(prod => prod._id === productId);
+
+    switch (productType?.typeProduct) {
+      case EnumProductType.DESSERT:
+        return data.filter(
+          product => product.typeProduct === EnumProductType.DESSERT
+        );
+      case EnumProductType.DRINK:
+        return data.filter(
+          product => product.typeProduct === EnumProductType.DRINK
+        );
+
+      default:
+        return data;
+    }
+  };
+
+  const relativeProducts = getRelativeProducts();
+
   return (
     <div className='relative'>
       <div className='text-right mt-10'>
@@ -33,7 +54,7 @@ const Catalog: FC<{ products: IProduct[]; productId?: string }> = ({
           <Sorting sortType={sortType} setSortType={setSortType} />
         )}
       </div>
-      {isLoading ? <Loader /> : <Carousel products={data} />}
+      {isLoading ? <Loader /> : <Carousel products={relativeProducts} />}
     </div>
   );
 };
