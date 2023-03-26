@@ -7,6 +7,8 @@ import { TypeSize } from '@/store/cart/cart.types';
 
 import { useActions } from '@/hooks/useActions';
 
+import { EnumProductType } from '@/types/product.intarface';
+
 import styles from '../Carousel.module.scss';
 import { useCarousel } from '../useCarousel';
 
@@ -17,7 +19,7 @@ import { ICarouselItem } from './carousel.iterface';
 
 const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
   const [drinkTrue, setDrinkTrue] = useState<boolean>(
-    product.typeProduct === 'drink'
+    product.typeProduct === EnumProductType.DRINK
   );
   const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
 
