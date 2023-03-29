@@ -40,7 +40,7 @@ const CartForm: FC = () => {
                     <Text>Total: {total}</Text>
                     <Text>Discount: {discount}%</Text>
                     <Text>For payment: {forPayment}$</Text>
-                    {isButtonShown ? <Button colorScheme='green' size='sm'>Lets Pay It</Button> : <Button colorScheme='green' size='sm' disabled>Lets Pay It</Button>}
+                    {isButtonShown ? <Button colorScheme='green' size='sm'><a href="/payment/PaymentOk">Lets Pay It</a></Button> : <Button colorScheme='green' size='sm' disabled>Lets Pay It</Button>}
                 </VStack>
             </FormControl>
         </Box>
