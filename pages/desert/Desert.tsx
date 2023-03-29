@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import DesertPage from '@/components/screens/desert/DesertPage';
 
-import { IProduct } from '@/types/product.intarface';
+import { EnumProductType, IProduct } from '@/types/product.intarface';
 
 import { ProductService } from '@/services/ProductService';
 
@@ -21,8 +21,9 @@ const Desert: NextPage<IDessertPage> = ({ products }) => {
 
 export const getStaticProps: GetStaticProps<IDessertPage> = async () => {
   const productsAll = await ProductService.getProductsByType();
+  console.log('🚀 ~ productsAll:', productsAll);
   const products = productsAll.filter(
-    productItem => productItem.typeProduct === 'dessert'
+    productItem => productItem.typeProduct === EnumProductType.DESSERT
   );
 
   return {
