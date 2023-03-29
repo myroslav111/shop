@@ -19,14 +19,15 @@ const Search: FC = () => {
     setSearchTerm(valueInput);
     filterItems(valueInput);
   };
-  const visible =
+  const isHidden =
     router.pathname === '/menu-shop/MenuShop' ||
     router.pathname === '/about-us/AboutUs' ||
-    router.pathname === '/create-product/CreateNewProduct';
+    router.pathname === '/create-product/CreateNewProduct' ||
+    router.pathname === '/payment/Payment';
 
   return (
     <>
-      {!visible && (
+      {!isHidden && (
         <div className={styles.search}>
           <InputGroup>
             <InputLeftElement

@@ -72,7 +72,12 @@ const Cart: FC = () => {
                 <div>total:</div>
                 <div>{formatToCurency(total)}</div>
               </div>
-              <Button colorScheme='whatsapp'>Buy now</Button>
+              {cart.length ? <Button colorScheme='whatsapp'>
+                <a href="/payment/Payment">Buy now</a>
+              </Button> : <Button colorScheme='whatsapp' disabled>
+                Buy now
+              </Button>}
+
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
