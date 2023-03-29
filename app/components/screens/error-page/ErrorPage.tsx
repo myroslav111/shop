@@ -6,7 +6,7 @@ const ErrorPage: FC = () => {
   return (
     <div className={styles.bodyError}>
       <div className={styles.bg}></div>
-      <h1 className={styles.text}>404: after 3s will beck to home</h1>
+      <h1 className={styles.text}>404: will return to the home page after 3 seconds</h1>
     </div>
   );
 };
