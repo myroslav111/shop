@@ -1,4 +1,4 @@
-import { SearchIcon } from '@chakra-ui/icons';
+import Link from 'next/link';
 import {
   Button,
   Drawer,
@@ -10,6 +10,7 @@ import {
   DrawerOverlay
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons';
 import { FC, useRef, useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import { MdAddShoppingCart, MdOutlineLocalGroceryStore } from 'react-icons/md';
@@ -73,7 +74,7 @@ const Cart: FC = () => {
                 <div>{formatToCurency(total)}</div>
               </div>
               {cart.length ? <Button colorScheme='whatsapp'>
-                <a href="/payment/Payment">Buy now</a>
+                <Link href="/payment/Payment">Buy now</Link>
               </Button> : <Button colorScheme='whatsapp' disabled>
                 Buy now
               </Button>}
