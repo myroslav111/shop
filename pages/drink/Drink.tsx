@@ -12,6 +12,7 @@ export interface IDrinkPage {
 }
 
 const Drink: NextPage<IDrinkPage> = ({ products }) => {
+  
   return (
     <>
       <DrinkPage products={products} />
