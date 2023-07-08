@@ -23,7 +23,9 @@ const Search: FC = () => {
     router.pathname === '/menu-shop/MenuShop' ||
     router.pathname === '/about-us/AboutUs' ||
     router.pathname === '/create-product/CreateNewProduct' ||
-    router.pathname === '/payment/Payment';
+    router.pathname === '/payment/Payment' ||
+    router.pathname === '/login/Login' ||
+    router.pathname === '/sign-in/SignIn';
 
   return (
     <>

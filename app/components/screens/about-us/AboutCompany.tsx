@@ -25,7 +25,7 @@ const AboutCompany: FC = () => {
               height={200}
             />
             {textContentOnAboutPage.map(el => (
-              <section>
+              <section key={el.title}>
                 <h2 className={styles.titleAboutUs}>{el.title}</h2>
                 <strong>
                   <em>{el.paragraph}</em>
