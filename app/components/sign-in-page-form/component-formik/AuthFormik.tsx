@@ -1,16 +1,12 @@
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
+import Link from 'next/link';
 import { FC, useState } from 'react';
 
 import { IFormValues } from '../SignInForm';
 
 import styles from './AuthFormik.module.scss';
-import {
-  emailValidationSchema,
-  loginValidationSchema,
-  passwordValidationSchema,
-  stepOneValidationSchema,
-  stepTwoValidationSchema
-} from '@/services/userValidation';
+import { stepOneValidationSchema } from '@/services/userValidation';
 
 interface IProps {
   handleUserData: Function;
@@ -39,7 +35,7 @@ const AuthFormik: FC<IProps> = props => {
       >
         {() => (
           <Form>
-            <h2>title</h2>
+            {/* <h2>title</h2> */}
             <div>
               <Field
                 className={styles.inputEmail}
@@ -60,8 +56,11 @@ const AuthFormik: FC<IProps> = props => {
                 placeholder='Password'
               />
               <span id='visibilityBtn' onClick={togglePassword}>
-                {/* {passwordShow ? <VisibilityIcon /> : <VisibilityOffIcon />} */}
-                {passwordConfirm ? '+' : '-'}
+                {passwordShow ? (
+                  <ViewIcon cursor={'pointer'} />
+                ) : (
+                  <ViewOffIcon cursor={'pointer'} />
+                )}
               </span>
               <ErrorMessage name='password' component='p' />
             </div>
@@ -73,8 +72,11 @@ const AuthFormik: FC<IProps> = props => {
                 placeholder='Confirm Password'
               />
               <span id='visibilityBtn' onClick={togglePasswordConfirm}>
-                {/* {passwordConfirm ? <VisibilityIcon /> : <VisibilityOffIcon />} */}
-                {passwordConfirm ? '+' : '-'}
+                {passwordConfirm ? (
+                  <ViewIcon cursor={'pointer'} />
+                ) : (
+                  <ViewOffIcon cursor={'pointer'} />
+                )}
               </span>
               <ErrorMessage name='confirmPassword' component='p' />
             </div>
@@ -83,12 +85,9 @@ const AuthFormik: FC<IProps> = props => {
                 button
               </button>
             </div>
-            <p>
-              {'Already have an account?'}
-              {/* <Link to='/login' className={scss.redirect_link__auth}>
-                {'Login'}
-              </Link> */}
-            </p>
+            <Link href='/login/Login'>
+              <p>{'Already have an account?'}</p>
+            </Link>
           </Form>
         )}
       </Formik>

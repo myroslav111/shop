@@ -17,7 +17,7 @@ const SignInForm: FC = () => {
     // city: '',
     // phone: ''
   });
-  console.log(data);
+  // console.log(data);
 
   const handleUserData = (newData: IFormValues): void => {
     setData(prev => ({ ...prev, ...newData }));
