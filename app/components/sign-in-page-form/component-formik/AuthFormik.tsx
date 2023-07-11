@@ -3,9 +3,11 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
+import ButtonForm from '@/components/button-form/ButtonForm';
+
+import styles from '../../login-page-form/component-formik-login/LoginFormik.module.scss';
 import { IFormValues } from '../SignInForm';
 
-import styles from './AuthFormik.module.scss';
 import { stepOneValidationSchema } from '@/services/userValidation';
 
 interface IProps {
@@ -46,7 +48,11 @@ const AuthFormik: FC<IProps> = props => {
                 autoComplete='autoComplete'
                 // as='select'
               />
-              <ErrorMessage name='email' component='p' />
+              <ErrorMessage
+                name='email'
+                component='p'
+                className={styles.errorMessage}
+              />
             </div>
             <div>
               <Field
@@ -62,7 +68,11 @@ const AuthFormik: FC<IProps> = props => {
                   <ViewOffIcon cursor={'pointer'} />
                 )}
               </span>
-              <ErrorMessage name='password' component='p' />
+              <ErrorMessage
+                name='password'
+                component='p'
+                className={styles.errorMessage}
+              />
             </div>
             <div>
               <Field
@@ -78,15 +88,17 @@ const AuthFormik: FC<IProps> = props => {
                   <ViewOffIcon cursor={'pointer'} />
                 )}
               </span>
-              <ErrorMessage name='confirmPassword' component='p' />
+              <ErrorMessage
+                name='confirmPassword'
+                component='p'
+                className={styles.errorMessage}
+              />
             </div>
-            <div>
-              <button className={styles.button} type='submit'>
-                button
-              </button>
+            <div className={styles.buttonFormContainer}>
+              <ButtonForm />
             </div>
             <Link href='/login/Login'>
-              <p>{'Already have an account?'}</p>
+              <p className={styles.textLink}>{'Already have an account?'}</p>
             </Link>
           </Form>
         )}

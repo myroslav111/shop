@@ -3,6 +3,8 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
+import ButtonForm from '@/components/button-form/ButtonForm';
+
 import styles from './LoginFormik.module.scss';
 import {
   emailValidationSchema,
@@ -60,7 +62,11 @@ const LoginFormik: FC = () => {
                 placeholder='Email'
                 autoComplete='off'
               />
-              <ErrorMessage name='email' component='p' />
+              <ErrorMessage
+                name='email'
+                component='p'
+                className={styles.errorMessage}
+              />
             </div>
             <div>
               <Field
@@ -72,21 +78,23 @@ const LoginFormik: FC = () => {
               />
               <span id='visibilityBtn' onClick={togglePassword}>
                 {passwordShow ? (
-                  <ViewIcon cursor={'pointer'} />
+                  <ViewIcon cursor={'pointer'} color={'green'} />
                 ) : (
-                  <ViewOffIcon cursor={'pointer'} />
+                  <ViewOffIcon cursor={'pointer'} color={'green'} />
                 )}
               </span>
-              <ErrorMessage name='password' component='p' />
+              <ErrorMessage
+                name='password'
+                component='p'
+                className={styles.errorMessage}
+              />
             </div>
 
-            <div>
-              <button className={styles.button} type='submit'>
-                login
-              </button>
+            <div className={styles.buttonFormContainer}>
+              <ButtonForm />
             </div>
             <Link href='/sign-in/SignIn'>
-              <p>no accaunt? Register</p>
+              <p className={styles.textLink}>No accaunt? Register</p>
             </Link>
             {/* <p className={scss.redirect__auth}>
               <Link to='/forgot-password' className={scss.redirect_link__auth}>
