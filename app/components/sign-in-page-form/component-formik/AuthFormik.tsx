@@ -63,9 +63,9 @@ const AuthFormik: FC<IProps> = props => {
               />
               <span id='visibilityBtn' onClick={togglePassword}>
                 {passwordShow ? (
-                  <ViewIcon cursor={'pointer'} />
+                  <ViewIcon cursor={'pointer'} color={'#6c946b'} />
                 ) : (
-                  <ViewOffIcon cursor={'pointer'} />
+                  <ViewOffIcon cursor={'pointer'} color={'#6c946b'} />
                 )}
               </span>
               <ErrorMessage
@@ -83,9 +83,9 @@ const AuthFormik: FC<IProps> = props => {
               />
               <span id='visibilityBtn' onClick={togglePasswordConfirm}>
                 {passwordConfirm ? (
-                  <ViewIcon cursor={'pointer'} />
+                  <ViewIcon cursor={'pointer'} color={'#6c946b'} />
                 ) : (
-                  <ViewOffIcon cursor={'pointer'} />
+                  <ViewOffIcon cursor={'pointer'} color={'#6c946b'} />
                 )}
               </span>
               <ErrorMessage

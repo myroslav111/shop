@@ -24,7 +24,12 @@ const Carousel: FC<{ products: IProduct[] }> = ({ products }) => {
   return (
     <section className={styles.carousel}>
       {filteredByInputProduct.map((product, index) => (
-        <CarouselItem key={product._id} product={product} index={index} />
+        <CarouselItem
+          key={product._id}
+          product={product}
+          products={products}
+          index={index}
+        />
       ))}
     </section>
   );
