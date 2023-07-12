@@ -78,9 +78,9 @@ const LoginFormik: FC = () => {
               />
               <span id='visibilityBtn' onClick={togglePassword}>
                 {passwordShow ? (
-                  <ViewIcon cursor={'pointer'} color={'green'} />
+                  <ViewIcon cursor={'pointer'} color={'#6c946b'} />
                 ) : (
-                  <ViewOffIcon cursor={'pointer'} color={'green'} />
+                  <ViewOffIcon cursor={'pointer'} color={'#6c946b'} />
                 )}
               </span>
               <ErrorMessage

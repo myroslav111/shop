@@ -17,12 +17,13 @@ import SizeVariations from './SizeVariations';
 import CarouselNavigation from './carousel-navigations/CarouselNavigation';
 import { ICarouselItem } from './carousel.iterface';
 
-const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
+const CarouselItem: FC<ICarouselItem> = ({ product, index, products }) => {
   const [drinkTrue, setDrinkTrue] = useState<boolean>(
     product.typeProduct === EnumProductType.DRINK
   );
   const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
 
+  // console.log(products);
   const { selectedItemIndex } = useCarousel();
   const { selectSlide } = useActions();
 
@@ -44,6 +45,7 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
           onSelectSlide={() => selectSlide(index)}
           product={product}
           isActive={isActive}
+          products={products}
         />
 
         <button className={styles.heading} onClick={() => selectSlide(index)}>

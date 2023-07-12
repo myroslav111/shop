@@ -10,10 +10,11 @@ import { ICarouselNavigation } from '../carousel.iterface';
 const CarouselNavigation: FC<ICarouselNavigation> = ({
   product,
   isActive,
-  onSelectSlide
+  onSelectSlide,
+  products
 }) => {
   const { prevSlide, nextSlide } = useActions();
-
+  // console.log(products?.length);
   return (
     <div className={styles.navigation}>
       <div>
@@ -24,8 +25,9 @@ const CarouselNavigation: FC<ICarouselNavigation> = ({
             </button>
             <button
               className={styles.arrow}
-              // onClick={() => nextSlide({ carouselLength: products.length })}
-              onClick={() => nextSlide({ carouselLength: 10 })}
+              onClick={() =>
+                nextSlide({ carouselLength: products?.length || 10 })
+              }
             >
               <ChevronRightIcon fontSize={46} />
             </button>
