@@ -41,7 +41,7 @@
       @apply mx-auto flex h-[13.4rem] w-[13.4rem] items-center justify-center overflow-hidden rounded-full bg-white lg:h-[18.4rem] lg:w-[18.4rem];
       box-shadow: 0px 5px 100px -50px #6c946b;
       img {
-        @apply -mt-10 w-4/6;
+        @apply -mt-10 w-4/6 rounded-full;
       }
     }
     .price {

@@ -36,6 +36,7 @@ const CarouselNavigation: FC<ICarouselNavigation> = ({
       </div>
       <button onClick={onSelectSlide} className={styles.image}>
         <Image
+          // className={styles.image}
           alt={product.name}
           src={product.images[0]}
           width={300}
